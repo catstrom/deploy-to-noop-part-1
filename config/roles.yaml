@@ -14,6 +14,16 @@ roles:
       - {type: shell, inline: '/bin/ln -f -s /etc/puppetlabs/puppet/environments/production/hiera.yaml /etc/puppetlabs/puppet/hiera.yaml && service pe-puppetserver restart'}
       - {type: puppet, manifests_path: ['vm','/etc/puppetlabs/puppet/environments/production/manifests'], manifest_file: site.pp, options: '--modulepath=/etc/puppetlabs/puppet/environments/production/modules:/opt/puppet/share/puppet/modules --hiera_config=/etc/puppetlabs/puppet/environments/production/hiera.yaml --verbose --debug'}
 
+  poss-master:
+    private_networks:
+      - {ip: '0.0.0.0', auto_network: true}
+    provider:
+      type: virtualbox
+      customize:
+        - [modifyvm, !ruby/sym id, '--memory', 2048, '--vrde', 'on']
+    provisioners:
+      - {type: hosts}
+
   pe-puppet-agent:
     private_networks:
       - {ip: '0.0.0.0', auto_network: true}

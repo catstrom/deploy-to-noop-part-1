@@ -5,6 +5,11 @@ vms:
   roles:
   - pe-puppet-master
 
+- name: master-os 
+  box: hashicorp/precise64
+  roles:
+  - poss-master
+
 - name: ubuntu1404-0
   box: hashicorp/precise64
   roles:
