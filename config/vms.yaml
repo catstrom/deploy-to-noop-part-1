@@ -6,7 +6,7 @@ vms:
   - pe-puppet-master
 
 - name: master-os 
-  box: hashicorp/precise64
+  box: puppetlabs/ubuntu-14.04-64-nocm 
   roles:
   - poss-master
 

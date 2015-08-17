@@ -4,4 +4,5 @@
 boxes:
   'centos-65-x64-vbox4210-nocm': 'http://puppet-vagrant-boxes.puppetlabs.com/centos-65-x64-virtualbox-nocm.box'
   'hashicorp/precise64': 'https://atlas.hashicorp.com/hashicorp/boxes/precise64'
+  'puppetlabs/ubuntu-14.04-64-nocm': 'https://atlas.hashicorp.com/puppetlabs/boxes/ubuntu-14.04-64-nocm'
   'debian-73-x64-virtualbox-nocm': 'http://puppet-vagrant-boxes.puppetlabs.com/debian-73-x64-virtualbox-nocm.box'
